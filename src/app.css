@@ -552,6 +552,157 @@ button.secondary:hover:not(:disabled) {
   font-size: 0.82rem;
   line-height: 1.5;
 }
+@media (min-width: 1024px) {
+  .header-content {
+    min-height: 72px;
+  }
+  .workspace {
+    padding: 1.25rem 0 2rem;
+  }
+  .intro {
+    margin-bottom: 0.75rem;
+  }
+  .intro h2 {
+    font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  }
+  .intro p:not(.eyebrow) {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+  .steps {
+    margin: 0.75rem 0 1rem;
+  }
+  .workbench {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+  .panel {
+    padding: 1.15rem;
+  }
+  .panel-heading {
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+  .panel-heading h2 {
+    font-size: 1.35rem;
+  }
+  .panel-heading p {
+    margin-top: 0.15rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+  .font-panel .drop-zone {
+    min-height: 142px;
+    height: calc(100% - 62px);
+  }
+  .field-group {
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+  }
+  textarea {
+    min-height: 106px;
+  }
+  fieldset {
+    margin-top: 0.85rem;
+  }
+  legend {
+    margin-bottom: 0.45rem;
+  }
+  .preset-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+  .preset-list button {
+    min-height: 58px;
+    padding: 0.5rem 0.55rem;
+  }
+  .preset-list small {
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+  .format-options {
+    gap: 0.5rem;
+  }
+  .format-options label {
+    min-height: 58px;
+    gap: 0.55rem;
+    padding: 0.6rem;
+  }
+  .format-options small,
+  .format-note,
+  .help,
+  .field-row {
+    font-size: 0.75rem;
+  }
+  .desktop-formats {
+    margin-top: 0.75rem;
+  }
+  .format-note {
+    margin-top: 0.6rem;
+  }
+  .panel details {
+    margin-top: 0.8rem;
+  }
+  .action-row {
+    margin-top: 1rem;
+  }
+  .output-panel .primary {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) and (max-height: 820px) {
+  .header-content {
+    min-height: 60px;
+  }
+  .workspace {
+    padding-top: 0.8rem;
+  }
+  .intro {
+    margin-bottom: 0.45rem;
+  }
+  .intro h2 {
+    font-size: 1.35rem;
+  }
+  .intro p:not(.eyebrow),
+  .steps {
+    display: none;
+  }
+  .panel {
+    padding: 0.9rem;
+  }
+  .panel-heading {
+    margin-bottom: 0.65rem;
+  }
+  .panel-heading h2 {
+    font-size: 1.2rem;
+  }
+  .font-panel .drop-zone {
+    min-height: 112px;
+  }
+  textarea {
+    min-height: 82px;
+  }
+  .preset-list button {
+    min-height: 48px;
+  }
+  .preset-list small {
+    display: none;
+  }
+  .format-options label {
+    min-height: 48px;
+  }
+  .format-options small,
+  .format-note {
+    font-size: 0.68rem;
+  }
+  .panel details {
+    margin-top: 0.55rem;
+  }
+  .action-row {
+    margin-top: 0.7rem;
+  }
+}
 @media (max-width: 720px) {
   .shell {
     width: min(100% - 24px, 1120px);

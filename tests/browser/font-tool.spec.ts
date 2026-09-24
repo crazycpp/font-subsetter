@@ -43,12 +43,25 @@ test("renders an accessible three-step workspace without horizontal overflow", a
   await page.goto("/");
   await expect(page).toHaveTitle("Font Subsetter");
   await expect(
-    page.getByRole("heading", { name: "只保留真正需要的字形" }),
+    page.getByRole("heading", { name: "选择字体、指定字符、生成子集" }),
   ).toBeVisible();
   await expect(page.getByLabel("需要保留的文字")).toBeVisible();
   await expect(
     page.getByRole("button", { name: "生成字体子集" }),
   ).toBeDisabled();
+
+  const viewport = page.viewportSize();
+  if ((viewport?.width ?? 0) >= 1024) {
+    const generateButton = page.getByRole("button", {
+      name: "生成字体子集",
+    });
+    const bounds = await generateButton.boundingBox();
+    expect(bounds).not.toBeNull();
+    expect(
+      (bounds?.y ?? Number.POSITIVE_INFINITY) + (bounds?.height ?? 0),
+    ).toBeLessThanOrEqual(viewport!.height);
+  }
+
   expect(
     await page
       .locator("html")

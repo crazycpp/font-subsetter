@@ -169,9 +169,9 @@
 <main id="workspace" class="shell workspace" tabindex="-1">
 	<section class="intro" aria-labelledby="tool-title">
 		<div>
-			<p class="eyebrow">一次性处理</p>
-			<h2 id="tool-title">只保留真正需要的字形</h2>
-			<p>选择字体、输入文字或字符范围，生成适合 Web 使用的 WOFF2 / WOFF。字体与文本始终留在当前浏览器。</p>
+			<p class="eyebrow">本地字体裁剪工作台</p>
+			<h2 id="tool-title">选择字体、指定字符、生成子集</h2>
+			<p>所有文件与文本仅在当前浏览器处理。</p>
 		</div>
 	</section>
 
@@ -187,7 +187,7 @@
 	{/if}
 
 	<div class="workbench">
-		<section class="panel" aria-labelledby="font-heading">
+		<section class="panel font-panel" aria-labelledby="font-heading">
 			<div class="panel-heading"><span class="step-number">01</span><div><h2 id="font-heading">选择字体</h2><p>支持 TTF、OTF、WOFF、WOFF2，单文件不超过 100 MB。</p></div></div>
 			<label
 				class:dragging={isDragging}
@@ -202,7 +202,7 @@
 			</label>
 		</section>
 
-		<section class="panel" aria-labelledby="charset-heading">
+		<section class="panel charset-panel" aria-labelledby="charset-heading">
 			<div class="panel-heading"><span class="step-number">02</span><div><h2 id="charset-heading">指定字符</h2><p>输入业务文字；系统会按 Unicode 字符自动去重。</p></div></div>
 			<div class="field-group">
 				<label for="text">需要保留的文字</label>
@@ -223,7 +223,7 @@
 			</div>
 		</section>
 
-		<section class="panel" aria-labelledby="output-heading">
+		<section class="panel output-panel" aria-labelledby="output-heading">
 			<div class="panel-heading"><span class="step-number">03</span><div><h2 id="output-heading">生成结果</h2><p>WOFF2 为默认输出；可按需组合 WebFont 与桌面字体并下载 ZIP。</p></div></div>
 			<fieldset class="format-group"><legend>WebFont 输出</legend><div class="format-options">
 				<label><input type="checkbox" checked={formats.includes('woff2')} onchange={() => toggleFormat('woff2')} disabled={isRunning} /><span><strong>WOFF2</strong><small>推荐，现代浏览器优先</small></span></label>
