@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+*.wasm binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Patch context lines use a leading space to represent blank lines.
+patches/*.patch text whitespace=-trailing-space

@@ -1,0 +1,46 @@
+name: Bug report
+description: Report reproducible behavior that differs from the documented result.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach proprietary fonts. Provide a redistributable fixture or
+        the minimum text and font metadata needed to reproduce the issue.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Include the expected and actual result.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open the tool
+        2. Select a font fixture
+        3. Enter text and output formats
+        4. Generate the subset
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      placeholder: "Chrome 123 on macOS 14"
+    validations:
+      required: true
+  - type: dropdown
+    id: input-format
+    attributes:
+      label: Input font format
+      options:
+        - TTF
+        - TrueType-outline OTF
+        - CFF/PostScript OTF
+        - WOFF
+        - WOFF2
+        - Other or unknown

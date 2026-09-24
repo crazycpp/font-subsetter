@@ -1,0 +1,16 @@
+.git/
+.github/
+node_modules/
+.svelte-kit/
+build/
+coverage/
+playwright-report/
+test-results/
+reference/
+.env
+.env.*
+.DS_Store
+Docs/
+docs/
+*.md
+!THIRD_PARTY_NOTICES.md

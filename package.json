@@ -1,0 +1,49 @@
+{
+  "name": "font-subsetter",
+  "version": "0.2.0",
+  "description": "Browser-only OpenType font subsetting with static Docker deployment.",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "font",
+    "font-subsetter",
+    "opentype",
+    "woff2",
+    "harfbuzz",
+    "sveltekit"
+  ],
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "lint": "prettier --check ."
+  },
+  "dependencies": {
+    "fflate": "^0.8.3",
+    "fonteditor-core": "2.6.3",
+    "harfbuzzjs": "1.4.0",
+    "table-of-general-standard-chinese-characters": "0.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.69.2",
+    "@sveltejs/vite-plugin-svelte": "^7.2.0",
+    "@types/node": "^26.1.1",
+    "prettier": "^3.9.5",
+    "prettier-plugin-svelte": "^4.1.1",
+    "svelte": "^5.56.4",
+    "svelte-check": "^4.7.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.10"
+  }
+}
